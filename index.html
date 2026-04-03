@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Mom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin:0;
+      font-family:"Noto Serif SC", serif;
+      background:linear-gradient(180deg,#fff8fb,#ffeef6);
+      display:flex;align-items:center;justify-content:center;
+      min-height:100vh;
+    }
+    .box{
+      width:min(900px,100%);
+      background:white;
+      border-radius:30px;
+      padding:24px;
+      box-shadow:0 20px 60px rgba(0,0,0,0.1);
+    }
+    h1{text-align:center;font-family:"Cormorant Garamond", serif;}
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+    video{width:100%;border-radius:16px;background:black;}
+    .note{line-height:1.8;}
+    @media(max-width:700px){
+      .grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>To Mom · Happy Birthday</h1>
+    <div class="grid">
+      <div>
+        <h2>🎵 给你的歌</h2>
+        <video controls>
+          <source src="assets/song.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="note">
+        <h2>🌷 今天的小提醒</h2>
+        💐 花预计：18:30 - 19:00 送到<br><br>
+        🎂 蛋糕预计：18:10 - 18:30 送到<br><br>
+        记得收一下～
+      </div>
+    </div>
+  </div>
+</body>
+</html>
