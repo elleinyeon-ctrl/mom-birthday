@@ -4,52 +4,120 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>For Mom</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     body{
       margin:0;
-      font-family:"Noto Serif SC", serif;
-      background:linear-gradient(180deg,#fff8fb,#ffeef6);
-      display:flex;align-items:center;justify-content:center;
       min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg,#fff8fb,#ffeef6);
+      font-family:"Noto Serif SC", serif;
+      color:#5a4451;
+      padding:20px;
     }
+
     .box{
-      width:min(900px,100%);
+      width:min(1000px,100%);
       background:white;
       border-radius:30px;
-      padding:24px;
+      padding:30px;
       box-shadow:0 20px 60px rgba(0,0,0,0.1);
     }
-    h1{text-align:center;font-family:"Cormorant Garamond", serif;}
+
+    .title-top{
+      text-align:center;
+      font-family:"Cormorant Garamond", serif;
+      font-size:28px;
+    }
+
+    .title-main{
+      text-align:center;
+      font-family:"Cormorant Garamond", serif;
+      font-size:64px;
+      margin-bottom:25px;
+    }
+
     .grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:20px;
     }
-    video{width:100%;border-radius:16px;background:black;}
-    .note{line-height:1.8;}
-    @media(max-width:700px){
-      .grid{grid-template-columns:1fr;}
+
+    .card{
+      background:#fffafc;
+      border:1px solid #f1dbe6;
+      border-radius:20px;
+      padding:18px;
+    }
+
+    h2{
+      font-family:"Cormorant Garamond", serif;
+      font-size:28px;
+      margin-bottom:12px;
+    }
+
+    iframe{
+      width:100%;
+      height:500px;
+      border-radius:15px;
+      border:none;
+    }
+
+    .note{
+      line-height:2;
+      font-size:18px;
+    }
+
+    @media (max-width: 800px){
+      .grid{
+        grid-template-columns:1fr;
+      }
+      iframe{
+        height:420px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="box">
-    <h1>To Mom · Happy Birthday</h1>
-    <div class="grid">
-      <div>
-        <h2>🎵 给你的歌</h2>
-        <video controls>
-          <source src="assets/song.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="note">
-        <h2>🌷 今天的小提醒</h2>
-        💐 花预计：18:30 - 19:00 送到<br><br>
-        🎂 蛋糕预计：18:10 - 18:30 送到<br><br>
-        记得收一下～
-      </div>
+
+<div class="box">
+
+  <div class="title-top">To Mom</div>
+  <div class="title-main">Happy Birthday</div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h2>给你的歌</h2>
+
+      <iframe 
+        src="https://drive.google.com/file/d/1AXctdo76Ry9Zc9y_aPFlu_7Ne-H_rZva/preview"
+        allow="autoplay">
+      </iframe>
+
     </div>
+
+    <div class="card">
+      <h2>今天的小提醒</h2>
+
+      <div class="note">
+💐 花预计：18:30 - 19:00 送到
+
+🎂 蛋糕预计：18:10 - 18:30 送到
+
+记得收一下～
+      </div>
+
+    </div>
+
   </div>
+
+</div>
+
 </body>
 </html>
